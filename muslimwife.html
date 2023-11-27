@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>muslim wife</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta nam="description" content="html,css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Amuslim wife AL-Sunnah</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="birth.html">About Prophet Muhammad(pbuh)</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html"><b>Lern about the Prophet_Muhammad_</b><font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html"><b>Islamic Media</b></a></li>
+            <li><a href="dawa.html"><b>Da'wah </b></a></li> 
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="media.html">Islamic Media</a></p>
+    </div>
+    <div class=" text-left"> 
+      <div class="col-sm-8">
+        <img src="Images/Wifes.jpg" alt="iss" width="60%"height="30%">
+      </div>
+      <b><h2>A Muslim wife’s paramount role in marriage</h2></b>
+      
+        <hr>
+      <p> <br>These days, men want a perfect Muslim wife, and Muslim wife want perfect husbands, but nobody can be flawless (maybe at some event,<br> but not constantly!). A Muslim wife can endeavor to be astounding; for whom the spouse can hardly wait to return home; and who he will cheerfully boast to his companions and colleagues. That is very near great, right? The way into a cheerful and fruitful marriage is unfenced communication and understanding each other’s requirements, which is quite tricky, particularly on hard days.</p>
+    <hr>
+    <div class="card">
+      <div class="card-header"><h4>KEY TAKEAWAYS</h4></div>
+      <div class="card-body">
+        <div class="card-tittle">A Muslim wife should have enough qualities. </div>
+        <div class="card-text">
+          <ul>
+            <li>Respect & Loyalty For Her Husband</li>
+              <li>Characteristics of A Muslim Wife</li>
+              <li>Qualities of a Muslim wife</li>
+              <li>A Muslim Wife Pleases Her Husband</li>
+              <li>Be Attentive To His Signals</li>
+              <li>A Muslim Wife Became Her Husband’s Advocate</li>
+             <li>Take Pride in Your Appearance</li>
+              <li>Give Him His Space – If He Wants so</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+        
+      
+      <p>We usually think if a man is in a problem, he will deal with it because he is a man. As working Muslim wife, it tends to be something similar for women. Likewise, we ought to get across the man’s perspective to improve as a spouse.</p>
+      <hr>
+        <h4>How to be a Good Muslim Wife?</h4>
+         <br>
+         <p>To apprehend the question mentioned above, we need to figure out what precisely a Muslim man needs from his better half? However, a portion of these things probably won’t sit well with you, however, attempt to think with a welcoming outlook.</p>
+         <p>Ladies have needs. But men do as well. Possibly, we should begin to think about them without getting disturbed. Not only will you be an astounding spouse to your better half, but you will likewise be blessed and bestowed upon for it.</p>
+        <p>It is narrated that Abu Hurairah (may Allah be pleased with him) said:</p>
+        <hr>
+        <q>O Messenger of Allah, what type of wife is best? He said: “The one who makes (her husband) happy when he looks at her, and she obeys him if he instructs her to do something; and she does not do anything about herself or his wealth in a manner of which he does not approve.</q>
+        <p>It is essential to understand that man has desires and wants. In the current era, Muslim wife are objectified as oppressed; but in reality, to be a good Muslim wife, a woman needs to understand and stand by her husband’s side to make him feel the oneness between them.</p> 
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/Busia-islamic-media/images/w&m.jpg" class="img-fluid rounded-start" alt="w&m">
+            </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Respect & Loyalty For Her Husband</h5>
+                <p class="card-text">He needs your respect to realize how you are doing to him toward the day’s end. Without respect, he will slowly move away.</p>
+                
+              </div>
+            </div>
+          </div>
+        
+       
+        
+        <hr>
+        <h2>The Quran says:</h2>
+
+          <q> Men are in charge of women by what Allah has given one over the other, what they spend from their wealth. So righteous women are devoutly obedient, guarding in [the husband’s] absence what Allah would have guarded them.
+
+            _ (4: 34)</q><br>
+
+               <br>
+                <p>Loyalty is just as crucial for a woman as for a man. If the circumstances become truly challenging, he has to know you’re beside him and will uphold him. Not insult him nor attempt to claim that his standing is tarnished or he no more has any honor.</p>
+       
+       <p>Both loyalty and respect are gained by giving it. If you are not ready to make that effort, do not anticipate that it will come to you.</p>
+     <h2>Anas ibn Malik (R.A) narrates, Holy Prophet Muhammad ﷺ said:</h2><br>
+<q>If a woman observes her five daily prayers; fasts during the month of Ramadan guards her chastity, and obeys her husband; she may enter the paradise through any gate she wishes.</q>
+
+
+<h4>Characteristics of A Muslim Wife</h4>
+<p>Muslim men desire intelligent Muslim wife. This doesn’t mean you should be Ph.D. qualified. Nor does it mean you need to return to class or college to get a degree; it essentially implies that you should attempt to be somebody who loves to become familiar with the world.</p>
+<p>Attempt to learn new and intriguing things, so you can talk about new subjects together, and you’ll feel undeniably more confident about yourself and your capacity to run your family.</p>
+
+<p>You ought to likewise talk about issues that may concern your better half with him.</p>
+
+<p>You should seek to meet his intellectual level, which will energize and challenge him, as long as you don’t choose to overpower him in each discussion!</p>
+
+<p>Perhaps the following time he strolls through that door, you should try tuning in to him instead of simply going on about how your day was. Not exclusively will he feel adored and tuned in to; however, he will see more value in you.</p>
+
+<p>Attempt to discover spaces of basic intrigue and discuss them together, so you can associate on a more profound level and appreciate each other’s knowledge.</p>
+<h4>Qualities of Muslim wife</h4>
+
+    
+<p>A good Muslim wife keeps steady over the family errands, even those she would prefer not to do. Try to plan a daily task checklist to handle the family tasks, so you keep steady over them, and nothing gets overpowering for you.</p>
+<P>A man needs an accomplice that makes a house, home for him, with adoration and care, and who will take care of him.</P>
+<P>But it does not mean burdening yourself as an enslaved person, because man is ought to expect a reasonable deal from his wife.</P>
+<hr>
+<h5><b>Ibn-Qudamah, the Hanbali scholar, said:</b></h5>
+  <q>A woman is not obliged to bake, cook, and so forth for her husband.
+
+    _ [recorded by Ahmad]</q>
+<p>When the daughter of Holy Prophet Muhammad ﷺ, Fatima (R.A) and Ali (R.A) complained to the Prophet ﷺ of the burden of household duties, he assigned the housekeeping to Fatima (R.A) and the external chores to Ali.</p>
+<br>
+<p>It is reported that Fatima (R.A) asked the Prophet Muhammad ﷺ for a servant.
+
+  He said,</p>
+  <br>
+  <p>Shall I not tell you of something better for you than that? When you go to sleep, say Subhaan’Allah (glory be to Allah) thirty-three times, and ‘Allah Akbar (Allah is most great) thirty-four times.</p>
+
+<br>
+<hr>
+<h4>A Muslim Wife Pleases Her Husband</h4>
+<p>A man wants his better half to look beautiful to maintain and increase love and purity. When he was about to enter Madinah, the Prophet Muhammad ﷺ told his Companions:</p>
+
+<p>Wait so that you may enter [the city] at night so that the women with unkempt hair may comb their hair, and the ones whose husbands were absent may shave.
+
+  Al-Bukhari</p>
+<br>
+<p>Like a Muslim wife and a man, both are required to take care of their appearances.</p>
+<p><b>Be Attentive To His Signals</b></p>
+
+<br>
+<p>As a Muslim wife, this is your ultimate ability and perhaps the ideal route to be a stunning Muslim spouse. It’s the one thing that makes you the best thing for a man.</p>
+
+<p>It is the reason men go out and submit such a lot of wrongdoing. The point of a Muslim marriage is to satisfy this need of a man, while for a lady, it’s her feelings.</p>
+
+<p>If you can keep your better half glad and fulfilled, he will be satisfied with you and need to satisfy you. (It works the two different ways!)</p>
+
+<p>“When a man calls his wife to his bed, and she does not respond, and he (the husband) spends the night angry with her, the angels curse her until morning.”
+
+   (Bukhari and Muslim).</p>
+<hr>
+<q>A Muslim Wife Became Her Husband’s Advocate</q>
+
+<p>If he realizes you are behind him in his choices, he’ll be more grounded and ready to handle the world. It’s said that behind each incredible man is an extraordinary lady, and this ought to be valid in a Muslim marriage totally.If he realizes you are behind him in his choices, he’ll be more grounded and ready to handle the world. It’s said that behind each incredible man is an extraordinary lady, and this ought to be valid in a Muslim marriage totally.</p>
+
+<p>When challenges are out of hand, he has to realize that you remain behind him and trust him to settle on the best choices for your family.</p>
+<br>
+<p>Aisha (R.A) narrates, that Prophet Muhammad ﷺ said of Khadijah (R.A):</p>
+
+<q>She believed in me when no one else did, she embraced Islam when people disbelieved me, and she helped and comforted me when there was no one to lend me a helping hand.</q>
+<hr>
+<p><b>Take Pride in Your Appearance</b></p>
+<p>Take Pride in Your Appearance
+  Take pride or Invest heavily in your appearance. When going out, spruce up and look great. As a decent Muslim spouse, you ought to be appearing beautiful for your significant other. (Same goes for him!)<br>
+  
+  It will also attract him towards you and keep him from being astray.</p>
+
+<p><b>Give Him His Space – If He Wants so</b></p>
+
+<br>
+<p>When you get in from a bustling day to a vacant home or your child’s napping in their seat, all you need to do is what? Put in some time in the tranquil, allowing yourself to relax. Whenever the situation allows, if your significant other works while you work at home (indeed, being a stay-at-home mum works as well!), attempt to give him ten to fifteen minutes. To relax before you and the children begin getting some information about his day, or start telling him concerning yours.<br><br>
+
+  It’s incredible to share the occasions of the day with somebody; it’s perhaps the best thing about being hitched and having a family; however, your home ought to be a place of peace, not a spot they believe they escape from each time they go to work. However, give him some space for ten minutes, obviously, on the off chance that he comes to you, get some information about his day and talk away<br>Summing up the discussion about the perfect Muslim wife with a verse of Holy Quran<br><br>
+  
+  </p>
+<q>Women impure are for men impure, and men impure for women impure and women of purity are for men of purity, and men of purity are for women of purity: these are not affected by what people say: for them, there is forgiveness and a provision honorable.
+
+</q>
+<h2>Show your affection.</h2><p> Everyone needs tenderness from others. Express your affection to your husband in the ways that come naturally to you. Find out what your loved one responds to, and show him love in this way.</p>
+<ul><li>If your husband likes physical affection, kiss and hug him when you greet him.</li>
+<li>If he likes to be told that you love him, tell him freely.</li>
+<li>If your spouse responds to compliments, look for something to compliment him about every day.</li>
+<li>Some husbands love gifts. Arrange treats that are special to him.
+</li></ul>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/Busia-islamic-media/images/thanks.jpg" class="img-fluid rounded-start" alt="thanks">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><b>Show your gratitude </b></h5>
+        <p class="card-text"><b>Leave him love notes and thank-you notes, but remember that all blessings come from Allah Subhana wa Ta'alaa, so say "Alhamdulillah" when you see something that makes you feel grateful</b>.</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <q> 
+Greet your husband with the traditional Islamic greeting. When you encounter your spouse, say "As-salaamu 'alaikum." Greet one another in this way to share your faith and celebrate your shared identity.
+
+
+      </q>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>
+<h3>Pray</h3>. Prayer is an vital part of every Muslims daily routine of worship. Make dua for the health of your relationship. Ask Allah Subhana wa Ta'alaa for guidance when you are experiencing difficulties with your spouse. Ask Allah Subhana wa Ta'alaa for ideas on how to please your husband, and think about these questions actively when you are not in prayer.</q>
+<p><b>Remind your husband to stick to practices that brings him closer to Allah Subhana wa Ta'alaa, especially Sunnah acts of ibadah (worship).</b></p>
+    <p class="author"><font color="blue"></font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>
+Be loving during breaks from sexual intimacy. While sexual intimacy is encouraged between spouses, there are some activities and times when penetrative sex is forbidden by the Qur'an.</q>
+        </q><p><b>During Ramadan, abstain from sexual intimacy except at night between iftar and suhoor. Make sure you are rested and well-fed enough to enjoy the exertion! Remember that the reward for every good deed, including intimacy, is multiplied by 70 during Ramadan so be sure to take advantage of this.</b></p>
+    <p class="author"></p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>AL-Sunnah<a href="index.html" data-toggle="tooltip" title="Visit Busia-islamic-media">Amuslim wife</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

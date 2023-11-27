@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Da’wah</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Da’wah AL-Sunnah</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html"><b>Lern about the Prophet_Muhammad_</b><font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html"><b>Islamic Media</b></a></li>
+            <li><a href="bussiness.html"><b>Bussinessing islamically</b></a></li> 
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Images/Frontlogo.jpg" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Images/L ogo.jpg" style="width: 50%;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="Images/Front.Logo3.jpg" style="max-width: 50%;">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+    </div>
+  </div>
+
+</div>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="islamicsociaty.html">islamic sociaty</a></p>
+      <p><a href="names.html"></a></p>
+      <p><a href="media.html"></a></p>
+      <p><a href="bussiness.html"></a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <hr>
+      <h1>The Da’wah </h1>
+      <p>Daʿwah (Arabic:<font color="blue"> دعوة,</font> Arabic: [ˈdæʕwæh], "invitation", also spelt<b> dâvah, daawa, dawah, daawah or dakwah</b><sup><font color="blue">[1][2][3]</font></sup>) is the act of inviting or calling people to embrace Islam. The plural is daʿwāt <font color="blue"> (عْوات) </font>or daʿawāt<font color="blue"> (دَعَوات)</font>.
+
+        For certain groups within Islam like the Salafis and Jamaat-e-Islami, 
+        daʿwah is also considered as a political activity. For these groups, 
+        the aim of daʿwah outreach is also to engineer a reversal of what they perceive 
+        as the decline of Islam in the modern era, through the systematic propagation of
+         Islamist ideology and ultimately enable the establishment of an Islamic state.</p>
+      <hr>
+      <h3>Early Islam</h3>
+      <p>
+        The term daʿwah has other senses in the<font color="blue" >Qur'an</font>. In <font color="blue">sura</font> (chapter) 30:25, for example, it denotes the call to the <font color="blue">dead to rise</font> on the <font color="blue">Day of Judgment</font>. When used in the Qur'an, it generally refers to <font color="blue">Allah's</font> invitation to live according to his will. Thus, when used in the first centuries of Islam, it usually referred to that message and was sometimes used interchangeably with ,<font color="blue">sharī‘a </font>and <font color="blue">dīn</font>.
+        <br>
+        Daʿwah is also described as the duty to "actively encourage fellow Muslims in the pursuance of greater piety in all aspects of their lives", a definition which has become central to <font color="blue">contemporary Islamic thought</font>.</p>
+   <hr>
+   <h1>During Prophet Muhammad's <font color="blue">(ﷺ)</font> era</h1>
+   <p>During the <font color="blue">Expedition of Al Raji</font> in 625,<font color="blue"><sup>[7]</sup> Muhammad</font> sent some men as missionaries
+     to various different tribes. Some men came to Muhammad and requested that Muhammad send
+      instructors to teach them Islam,[7] but the men were bribed by the two tribes of Khuzaymah, who wante
+
+     d revenge for the<font color="blue"> assassination of Khalid bin Sufyan</font> (Chief of the<font color="blue"> Banu Lahyan </font>tribe) by Muhammad's followers. 
+     A number of missionaries were killed in this expedition, either eight or, according to another account, ten.<br>
+
+    Then during the <font color="blue">Expedition of Bir Maona</font> in July 625[10] Muhammad sent some missionaries at the request of some men 
+    from the Banu Amir tribe, but the Muslims were again killed in revenge for the <font color="blue">assassination of Khalid bin Sufyan</font>
+    by Muhammad's followers.[8] 70 Muslims were killed during this expedition.<br>
+    
+    During the <font color="blue">Expedition of Khalid ibn al-Walid (Banu Jadhimah)</font> in January 630, Muhammad sent Khalid ibn Walid 
+    to invite the Banu Jadhimah tribe to Islam. This is mentioned in the Sunni Hadith <font color="blue">Sahih al-Bukhari, 5:59:628</font>.<br>
+    
+  <font color="blue">  Mus'ab ibn 'Umair</font> was the first Muslim envoy in September 621. He was sent to Yathrib (now <font color="blue">Medina</font>) to teach the
+     people the doctrines of Islam and give them guidance.</p>
+  
+     <hr>
+
+  <h1>Etymology</h1>
+  <p>Daʿwah <font color="blue">[ˈdæʕwæh]</font> literally means "issuing a summons" or "making an invitation". Grammatically, 
+    the word represents a <font color="blue">gerund</font> of a verb with the <font color="blue">triconsonantal root</font> d-ʕ-w (د-ع-و) meaning variously 
+    "to summon" or "to invite". A<font color="blue"> Muslim</font> who practices daʿwah, either as a religious worker or in a volunteer 
+    community effort, is called a <font color="blue">dāʿī</font> (داعي, plural duʿāh دعاة <font color="blue">[dʊˈʕæː]</font>).
+
+    A dāʿī, is a person who invites people to understand and accept Islam through <font color="blue">dialogue</font> and other techniques, may be regarded as a <font color="blue">missionary</font> inviting people to the faith, prayer and manner of Islamic life.[5]</p>
+  <hr>
+  <h1>Purpose</h1>
+  <p>In <font color="blue">Islamic theology</font>, the purpose of daʿwah is to invite people, Muslims and non-Muslims, 
+    to understand the worship of God as expressed in the Qur'an and the <font color="blue">sunnah</font> of <font color="blue">Muhammad_(ﷺ)</font> and to
+     inform them about Muhammad.
+
+    Daʿwah as the "Call towards God" is the means by which Muhammad_(ﷺ) began spreading the message 
+    of the Qur'an to mankind. After Muhammad, his followers and the <font color="blue">Ummah</font> (Muslim community) assumed
+    responsibility for it. They convey the message of the Qur'an by providing information on why and 
+    how the Qur'an preaches <font color="blue">monotheism</font>. Muhammad saw Islam as the true religion and mission of all earlier
+     prophets. He believed that their call had been limited to their own people but that his was universal.
+     His mission as the final prophet was to repeat to the whole world this call and invitation (daʿwah) 
+     to Islam. Muhammad wrote to various non-Muslim rulers, inviting them to convert.</p>
+     <hr>
+     <h1>Scriptural basis</h1>
+     <p>The importance of daʿwah has been emphasised many times in the Quran:
+
+      Who is better in speech than one who calls to Allah, does righteous deeds and says indeed I am among the Muslims.
+      
+      — Quran, Sura 41 (HAA-meem-as-sajdah), ayah 33
+      You are the best nation raised up for humankind. You enjoin righteousness, forbid corruption and you believe in <font color="blue">Allah</font>.
+      
+      — Quran, Sura 3 (Al-Imran), ayah 110
+      Let there arise among you a group inviting to all that is good, enjoining righteousness and forbidding evil. Those are the successful ones.
+      
+      — Quran, Sura 3 (Al-Imran), ayah 104
+      Call to the way of your Lord with wisdom and good preaching.
+      
+      — Quran, Sura 16 (An-Nahl), ayah 125</p>
+      <p>In the <font color="blue">Hadith</font> ("sayings") of <font color="blue">Muhammad_(ﷺ)</font>, daʿwah is mentioned to emphasise importance and virtues:
+
+        "Whoever directs someone to do good will gain the same reward as the one who does good."
+
+        "Whoever calls to guidance will receive the same reward as the one who follows him without
+         any decrease in the reward of his follower."
+        "For Allah to guide someone by your hand is better for you than having red camels."
+        (In<font color="blue"> ancient Arabia, camels</font> – especially of a reddish hue – were considered particularly valuable property.)
+        "Convey from me, even if it be only a single verse."
+        <font color="blue">Muhammad_(ﷺ)</font> sent <font color="blue">Muadh ibn Jabal</font> to <font color="blue">Yemen</font> and told him “You will be going to Christians and Jews, so
+         the first thing you should invite them to is the assertion of the oneness of Allah, Most High.
+          If they realize that, then inform them that Allah has made five daily prayers obligatory on them. 
+          If they pray them, then inform them that Allah has made the payment of charity from their wealth 
+          obligatory on their rich to be given to their poor. If they accept that, then take it from them and
+           avoid the best part of people's property.”</p>
+           <hr>
+           <h2>Methods</h2>
+           <h3>Gentleness</h3>
+           <p>With regard to Muhammad's mild nature in preaching <font color="blue">Islam</font>, the <font color="blue">Quran</font> says:
+
+            And by the mercy of Allah you dealt with them gently. If you were harsh and hardhearted, they would have fled from around you. (<font color="blue">Quran 3:159</font>).
+            
+            The Quran says about <font color="blue">Moses</font> and <font color="blue">Aaron</font> who preached to Pharaoh, the claimant of God:
+            
+            So speak to him, both of you, mildly in order that he may reflect or fear God. (<font color="blue">Quran 20:44</font>).
+            
+            Muhammad was reported by his wife, <font color="blue">Aisha</font> to have said “Whenever gentleness is in a thing, it beautifies it, and whenever it is withdrawn from something, it defaces.”[30]
+            
+            Muhammad was quoted by Jareer as saying,“One deprived of gentleness is deprived of all good.</p>
+            <hr>
+            <h3>Influence in politics</h3>
+            <p>Muslims made it a part of their political theory (through relating daʿwah to jihad) and life (using the concept of daʿwah in their political agendas). Taken in general, the intertwining of daʿwah and politics, then, has been a feature throughout the Muslim history, though practical implications of this have been different in different ages.</p>
+            <hr>
+            <h3>Wisdom</h3>
+            <p>"Invite to the way of your Lord with wisdom and good instruction, and argue with them in a way that is best. 
+              Indeed, your Lord is most knowing of who has strayed from His way, and He is most knowing of who is [rightly] 
+              guided ...". (<font color="blue">Quran 16:125</font>).<br>
+              A classical example of diversion in daʿwah can be seen in the case of <font color="blue">Yusuf</font> in prison when two prisoners asked 
+              him to interpret their dreams. One of them said: “I saw myself pressing wine.” The other said: “I saw myself 
+              carrying bread on my head and birds were eating from it.” They asked: “Inform us of the interpretation of these 
+              things. Indeed, we believe you are one of the righteous.” He replied: “Whenever food came to you as your provision,
+               I informed you about it before it came. That is from what my Lord has taught me.... As for one of you, he will pour
+                wine for his lord to drink, and as for the other, he will be crucified and birds will eat from his head. 
+                This is the case judged concerning which you both inquire.” (<font color="blue">Quran 12:35–41</font>)</p>
+  <h3>Speaking a common language</h3>
+  <p>“I did not send any messenger except that he spoke the language of his people to explain to them.” (<font color="blue">Quran 14:4</font>)</p>
+<hr>
+<h3>Location</h3>
+<p>Doing daʿwah in the right location. For example, <font color="blue">Mount Safa</font> in the time of Muhammad was used for announcements.
+   So Muhammad went there to make his point. 
+  He chose that particular location because he knew the people who he was inviting to <font color="blue">Islam</font>. 
+  He knew their nature and characteristics, so he chose Mount Safa. 
+  He climbed up to its summit and addressed his people saying: “O people of <font color="blue">Quraysh</font>, 
+  if I were to tell you there was an army behind this hill would you listen to me?”</p>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- Container (The Band Section) -->
+<div id="names" class="container text-center">
+  <h3>THE 99Names of Allah</h3>
+  <p><em>Allah is the greatest</em></p>
+  <p>The first of the five pillars of Islam is belief in Allah. As Muslims,
+     we believe in Allah in accordance with His beautiful names and attributes. 
+     Learning and memorising the names of Allah (SWT)<a href="names.html">99Names of Allah</a> will help us to identify 
+     the correct way to believe in Him.</p>
+     <br>
+     
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <q>Allah – there is no deity except Him. To Him belong the best names.
+      </q>
+    <p class="author"><font color="blue">Qur’an 20:8</font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>And to Allah belong the best names, so invoke Him by them.
+      </q>
+    <p class="author"><font color="blue">Qur’an 7:180</font></p>
+  </div>
+  
+  <div class="mySlides">
+    <q>There are immense benefits to learning and memorising the beautiful 99 names of Allah, as it bring us closer and strengthens our relationship with the Almighty Allah.
+
+      Prophet Muhammad (peace be upon him) said:</q>
+      <q>Allah has ninety-nine names, i.e. one-hundred minus one, and whoever knows them will go to Paradise.
+        </q>
+    <p class="author">Bukhari</p>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>AL-Sunnah<a href="index.html" data-toggle="tooltip" title="Visit ">da’wah </a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

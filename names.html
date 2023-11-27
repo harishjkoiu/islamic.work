@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>99 Names</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #080808;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+.container{
+  width: 100%;
+  height: 50%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">99Names AL-Sunnah</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="names.html">99Names of Allah</a></li>
+        <li><a href="islamicsociaty.html">Islamic sociaty</a></li>
+        <li><a href="SAW.html">Prophet Muhammad(PBUH)</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="SAW.html"><b>Lern about the Prophet_Muhammad_</b><font color="blue">(ﷺ)</font></a></li>
+            <li><a href="media.html"><b>Islamic Media</b></a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<br><br>
+</div>
+
+<div class="mySlides w3-display-container w3-center">
+  <img src="Images/Frontlogo.jpg" style="width:50%">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+  </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="Images/Logo.jpg" style="width: 50%;">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+  </div>
+</div>
+<div class="mySlides w3-display-container w3-center">
+  <img src="Images/Front.Logo3.jpg" style="max-width: 50%;">
+  <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-30 w3-hide-small">
+  </div>
+</div>
+
+    <div class="col-sm-8 text-left"> 
+      <hr>
+      <h1><b>99 Names of Allah (Al Asma Ul Husna)</b></h1>
+      <p>The first pillar of imaan (faith) in Islam is Belief in Allah. As Muslims, we believe in Allah in accordance with His beautiful names and attributes. Allah has revealed His names repeatedly in the Holy Quran primarily for us to understand who He is. Learning and memorizing the names of Allah will help us to identify the correct way to believe in Him. There is nothing more sacred and blessed than understanding the names of Allah and living by them. How do we expect to worship, love, fear and trust our Lord, The Almighty Allah, if we don’t know who He is?</p>
+<br>
+      <p><b>Definition of 99names</b> </p>
+      <p><b>Allah – the One and Only God, who is most merciful, compassionate and loving towards His creations. The 99 Names of Allah (also known as Asma-ul Husna) in Islam are the names of Allah which signify different aspects and attributes of Him</p>
+      <p><b>Allah says in the Quran</b></p>
+      <p> And to Allah belong the best names, so invoke Him by them.. (Quran 7:180)</p>
+      <br>
+      <p>Allah – there is no deity except Him. To Him belong the best names. (Quran 20:8)</p>
+      <br>
+      <p>He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. (Quran 59:24)</p>
+      <br>
+      <p>Prophet Muhammad (ﷺ) said, “Allah has ninety-nine names, i.e. one-hundred minus one, and whoever knows them will go to Paradise.”
+        (<font color="green">Sahih Bukhari 50:894</font>)</p>
+        <br>
+        <p>Abu Huraira reported Allah’s Messenger (ﷺ) as saying: There are ninety-nine names of Allah; he who commits them to memory would get into Paradise. Verily, Allah is Odd (He is one, and it is an odd number) and He loves odd number..”
+          (<font color="green">Sahih Muslim Book-48 Hadith-5</font>)</p><b/
+
+      <h1>99 names of Allah – Meaning and Explanation</h1>
+      
+      <table>
+        <tr>
+          <th bgcolor=" sky blue"><font color="white">#</font></th>&nbsp;
+          <th bgcolor="sky blue"><font color="white">Name</font></th>&nbsp;
+          
+          <th bgcolor="sky blue"><font color="white">Transliteration</font></th>&nbsp;
+          <th bgcolor="sky blue"><font color="white">Meaning</font></th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><big>ٱلْرَّحْمَـانُ</big></td>
+          
+          
+          <td>AR-RAHMAAN</td>
+        <td>The Most or Entirely Merciful</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><big>ٱلْرَّحِيْمُ</big></td>
+          
+          <td>AR-RAHEEM</td>
+        <td>The Bestower of Mercy</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ٱلْمَلِكُ</td>
+          
+          <td>AL-MALIK</td>
+        <td>The King and Owner of Dominion</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ٱلْقُدُّوسُ</td>
+          
+          <td>AL-QUDDUS</td>
+        <td>The Absolutely Pure</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ٱلْسَّلَامُ</td>
+          
+          <td>AS-SALAM</td>
+        <td>The Perfection and Giver of Peace</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ٱلْمُؤْمِنُ</td>
+          <td>AL-MU’MIN</td>
+          <td>The One Who gives Emaan and Security</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ٱلْمُهَيْمِنُ</td>
+          <td>AL-MUHAYMIN</td>
+          <td>The Guardian, The Witness, The Overseer</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>ٱلْعَزِيزُ</td>
+          <td>AL-AZEEZ</td>
+          <td>The All Mighty</td>
+        </tr>
+
+        <tr>
+          <td>9</td>
+          <td>ٱلْجَبَّارُ</td>
+          <td>AL-JABBAR</td>
+          <td>The Compeller, The Restorer</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>ٱلْمُتَكَبِّرُ</td>
+          <td>AL-MUTAKABBIR</td>
+          <td>The Supreme, The Majestic</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>ٱلْخَالِقُ</td>
+          <td>AL-KHAALIQ</td>
+          <td>The Creator, The Maker</td>
+
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ٱلْبَارِئُ</td>
+          <td>AL-BAARI’</td>
+          <td>The Originator</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>ٱلْمُصَوِّرُ</td>
+          <td>AL-MUSAWWIR</td>
+          <td>The Fashioner</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>ٱلْغَفَّارُ</td>
+          <td>AL-GHAFFAR</td>
+          <td>The All- and Oft-Forgiving</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>	ٱلْقَهَّارُ</td>
+          <td>AL-QAHHAR</td>
+          <td>The Subduer, The Ever-Dominating</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>	ٱلْوَهَّابُ</td>
+          <td>AL-WAHHAAB</td>
+          <td>The Giver of Gifts</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>ٱلْرَّزَّاقُ</td>
+            <td>AR-RAZZAAQ</td>
+            <td>The Provider</td>
+
+          </tr>
+        <tr>
+          <td>18</td>
+          <td>	ٱلْفَتَّاحُ</td>
+          <td>AL-FATTAAH</td>
+          <td>The Opener, The Judge</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>ٱلْعَلِيمُ</td>
+          <td>AL-‘ALEEM</td>
+          <td>The All-Knowing, The Omniscient</td>
+
+        </tr>
+<tr>
+  <td>20</td>
+  <td>ٱلْقَابِضُ</td>
+  <td>AL-QAABID</td>
+  <td>The Withholder</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td>ٱلْبَاسِطُ</td>
+  <td>AL-BAASIT</td>
+  <td>The Extender</td>
+</tr>
+                           
+         <tr>
+          <td>22</td>
+          <td>ٱلْخَافِضُ</td>
+          <td>AL-KHAAFIDH</td>
+          <td>The Reducer, The Abaser</td>
+         </tr>
+         <tr>
+          <td>23</td>
+          <td>ٱلْرَّافِعُ</td>
+          <td>AR-RAAFI’</td>
+          <td>The Exalter, The Elevator</td>
+         </tr>
+         <tr>
+          <td>24</td>
+          <td>ٱلْمُعِزُّ</td>
+          <td>AL-MU’IZZ</td>
+          <td>The Honourer, The Bestower</td>
+         </tr
+         <tr>
+          <td>25</td>
+          <td>ٱلْمُذِلُّ</td>
+          <td>AL-MUZIL</td>
+          <td>The Dishonourer, The Humiliator</td>
+         </tr>
+
+
+         <tr>
+          <td>26</td>
+          <td>ٱلْسَّمِيعُ</td>
+          <td>AS-SAMEE’</td>
+          <td>The All-Hearing</td>
+         </tr>
+         <tr>
+          <td>27</td>
+          <td>	ٱلْبَصِيرُ</td>
+          <td>AL-BASEER</td>
+          <td>The All-Seeing</td>
+         </tr>
+         <tr>
+          <td>28</td>
+          <td>ٱلْحَكَمُ</td>
+          <td>AL-HAKAM</td>
+          <td>The Judge, The Giver of Justice</td>
+         </tr>
+
+         <tr>
+          <td>29</td>
+          <td>ٱلْعَدْلُ</td>
+          <td>AL-‘ADL</td>
+          <td>The Utterly Just</td>
+         </tr>
+         <tr>
+          <td>30</td>
+          <td>ٱلْلَّطِيفُ</td>
+          <td>AL-LATEEF</td>
+          <td>The Subtle One, The Most Gentle</td>
+         </tr>
+
+         <tr>
+          <td>31</td>
+          <td>ٱلْخَبِيرُ</td>
+          <td>AL-KHABEER</td>
+          <td>The Acquainted, the All-Aware</td>
+         </tr>
+         <tr>
+          <td>32</td>
+          <td>	ٱلْحَلِيمُ</td>
+          <td>AL-HALEEM</td>
+          <td>The Most Forbearing</td>
+         </tr>
+         <tr>
+          <td>33</td>
+          <td>ٱلْعَظِيمُ</td>
+          <td>AL-‘ATHEEM</td>
+          <td>The Magnificent, The Supreme</td>
+         </tr>
+
+         <tr>
+          <td>34</td>
+          <td>	ٱلْغَفُورُ</td>
+          <td>AL-GHAFOOR</td>
+          <td>The Forgiving, The Exceedingly Forgiving</td>
+         </tr>
+
+         <tr>
+          <td>35</td>
+          <td>ٱلْشَّكُورُ</td>
+          <td>ASH-SHAKOOR</td>
+          <td>The Most Appreciative</td>
+         </tr>
+
+         <tr>
+          <td>36</td>
+          <td>ٱلْعَلِيُّ</td>
+          <td>AL-‘ALEE</td>
+          <td>The Most High, The Exalted</td>
+         </tr>
+         <tr>
+          <td>37</td>
+          <td>ٱلْكَبِيرُ</td>
+          <td>AL-KABEER</td>
+          <td>The Greatest, The Most Grand</td>
+         </tr>
+
+         <tr>
+          <td>38</td>
+          <td>	ٱلْحَفِيظُ</td>
+          <td>AL-HAFEEDH</td>
+          <td>The Preserver, The All-Heedful and All-Protecting</td>
+         </tr>
+         <tr>
+          <td>39</td>
+          <td>	ٱلْمُقِيتُ</td>
+          <td>AL-MUQEET</td>
+          <td>The Sustainer</td>
+         </tr>
+         <tr>
+          <td>40</td>
+          <td>ٱلْحَسِيبُ</td>
+          <td>AL-HASEEB</td>
+          <td>The Reckoner, The Sufficient</td>
+         </tr>
+         <tr>
+          <td>41</td>
+          <td>ٱلْجَلِيلُ</td>
+          <td>AL-JALEEL</td>
+          <td>The Majestic</td>
+         </tr>
+         
+         <tr>
+          <td>42</td>
+          <td>	ٱلْكَرِيمُ</td>
+          <td>AL-KAREEM</td>
+          <td>The Most Generous, The Most Esteemed</td>
+         
+        </tr>
+
+        <tr>
+          <td>43</td>
+          <td>ٱلْرَّقِيبُ</td>
+          <td>AR-RAQEEB</td>
+          <td>The Watchful</td>
+         </tr>
+         <tr>
+          <td>44</td>
+          <td>	ٱلْمُجِيبُ</td>
+          <td>AL-MUJEEB</td>
+          <td>The Responsive One</td>
+         </tr>
+         <tr>
+          <td>45</td>
+          <td>ٱلْوَاسِعُ</td>
+          <td>AL-WAASI’</td>
+          <td>The All-Encompassing, the Boundless</td>
+         </tr>
+         <tr>
+          <td>46</td>
+          <td>ٱلْحَكِيمُ</td>
+          <td>AL-HAKEEM</td>
+          <td>The All-Wise</td>
+         </tr>
+         <tr>
+          <td>47</td>
+          <td>ٱلْوَدُودُ</td>
+          <td>AL-WADOOD</td>
+          <td>The Most Loving</td>
+         </tr>
+         <tr>
+          <td>48</td>
+          <td>	ٱلْمَجِيدُ</td>
+          <td>AL-MAJEED</td>
+          <td>The Glorious, The Most Honorable</td>
+         </tr>
+         <tr>
+          <td>49</td>
+          <td>	ٱلْبَاعِثُ</td>
+          <td>AL-BA’ITH</td>
+          <td>The Resurrector, The Raiser of the Dead</td>
+         </tr>
+         <tr>
+          <td>50</td>
+          <td>ٱلْشَّهِيدُ</td>
+          <td>ASH-SHAHEED</td>
+          <td>The All- and Ever Witnessing</td>
+         </tr>
+
+         <tr>
+          <td>51</td>
+          <td>ٱلْحَقُّ</td>
+          <td>AL-HAQQ</td>
+          <td>The Absolute Truth</td>
+         </tr>
+
+         <tr>
+          <td>52</td>
+          <td>ٱلْوَكِيلُ</td>
+          <td>AL-WAKEEL</td>
+          <td>The Trustee, The Disposer of Affairs</td>
+         </tr>
+
+         <tr>
+          <td>53</td>
+          <td>ٱلْقَوِيُّ</td>
+          <td>AL-QAWIYY</td>
+          <td>The All-Strong</td>
+         </tr>
+
+         <tr>
+          <td>54</td>
+          <td>ٱلْمَتِينُ</td>
+          <td>AL-MATEEN</td>
+          <td>The Firm, The Steadfast</td>
+         </tr>
+         <tr>
+          <td>55</td>
+          <td>ٱلْوَلِيُّ</td>
+          <td>AL-WALIYY</td>
+          <td>The Protecting Associate</td>
+         </tr>
+         <tr>
+          <td>56</td>
+          <td>	ٱلْحَمِيدُ</td>
+          <td>AL-HAMEED</td>
+          <td>The Praiseworthy</td>
+         </tr>
+         <tr>
+          <td>57</td>
+          <td>	ٱلْمُحْصِيُ</td>
+          <td>AL-MUHSEE</td>
+          <td>The All-Enumerating, The Counter</td>
+         </tr>
+         <tr>
+          <td>58</td>
+          <td>ٱلْمُبْدِئُ</td>
+          <td>AL-MUBDI</td>
+          <td>The Originator, The Initiator</td>
+         </tr>
+         <tr>
+          <td>59</td>
+          <td>ٱلْمُعِيدُ</td>
+          <td>AL-MU’ID</td>
+          <td>The Restorer, The Reinstater</td>
+         </tr>
+         <tr>
+          <td>60</td>
+          <td>	ٱلْمُحْيِى</td>
+          <td>AL-MUHYEE</td>
+          <td>The Giver of Life</td>
+         </tr>
+    <tr>
+      <td>61</td>
+      <td>ٱلْمُمِيتُ</td>
+        <td>AL-MUMEET</td>
+        <td>The Bringer of Death, the Destroyer</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>ٱلْحَىُّ</td>
+      <td>AL-HAYY</td>
+      <td>The Ever-Living</td>
+    </tr>
+
+    <tr>
+      <td>63</td>
+      <td>ٱلْقَيُّومُ</td>
+      <td>AL-QAYYOOM</td>
+      <td>The Sustainer, The Self-Subsisting</td>
+    </tr>
+
+    <tr>
+      <td>64</td>
+      <td>ٱلْوَاجِدُ</td>
+      <td>AL-WAAJID</td>
+      <td>The Perceiver</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>ٱلْمَاجِدُ</td>
+      <td>AL-MAAJID</td>
+      <td>The Illustrious, the Magnificent</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>	ٱلْوَاحِدُ</td>
+      <td>AL-WAAHID</td>
+      <td>The One</td>
+    </tr>
+
+    <tr>
+      <td>67</td>
+      <td>ٱلْأَحَد</td>
+      <td>AL-AHAD</td>
+      <td>The Unique, The Only One</td>
+    </tr>
+
+    <tr>
+      <td>68</td>
+      <td>ٱلْصَّمَدُ</td>
+      <td>AS-SAMAD</td>
+      <td>The Eternal, Satisfier of Needs</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>ٱلْقَادِرُ</td>
+      <td>AL-QADIR</td>
+      <td>The Capable, The Powerful</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>ٱلْمُقْتَدِرُ</td>
+      <td>AL-MUQTADIR</td>
+      <td>The Omnipotent</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>ٱلْمُقَدِّمُ</td>
+      <td>AL-MUQADDIM</td>
+      <td>The Expediter, The Promoter</td>
+    </tr>
+
+    <tr>
+      <td>72</td>
+      <td>ٱلْمُؤَخِّرُ</td>
+      <td>AL-MU’AKHKHIR</td>
+      <td>The Delayer, the Retarder</td>
+    </tr>
+
+    <tr>
+      <td>73</td>
+      <td>	ٱلأَوَّلُ</td>
+      <td>AL-AWWAL</td>
+      <td>The First</td>
+    </tr>
+
+    <tr>
+      <td>74</td>
+      <td>	ٱلْآخِرُ</td>
+      <td>AL-AAKHIR</td>
+      <td>The Last</td>
+    </tr>
+
+    <tr>
+      <td>75</td>
+      <td>ٱلْظَّاهِرُ</td>
+      <td>AZ-DHAAHIR</td>
+      <td>The Manifest</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>	ٱلْبَاطِنُ</td>
+      <td>AL-BAATIN</td>
+      <td>The Hidden One, Knower of the Hidden</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>ٱلْوَالِي</td>
+      <td>AL-WAALI</td>
+      <td>The Governor, The Patron</td>
+    </tr>
+
+    <tr>
+      <td>78</td>
+      <td>ٱلْمُتَعَالِي</td>
+      <td>AL-MUTA’ALI</td>
+      <td>The Self Exalted</td>
+    </tr>
+
+    <tr>
+      <td>79</td>
+      <td>ٱلْبَرُّ</td>
+      <td>AL-BARR</td>
+      <td>The Source of Goodness, the Kind Benefactor</td>
+    </tr>
+
+    <tr>
+      <td>80</td>
+      <td>ٱلْتَّوَّابُ</td>
+      <td>AT-TAWWAB</td>
+      <td>The Ever-Pardoning, The Relenting</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>ٱلْمُنْتَقِمُ</td>
+      <td>AL-MUNTAQIM</td>
+      <td>The Avenger</td>
+    </tr>
+
+    <tr>
+      <td>82</td>
+      <td>ٱلْعَفُوُّ</td>
+      <td>AL-‘AFUWW</td>
+      <td>The Pardoner</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>ٱلْرَّؤُفُ</td>
+      <td>AR-RA’OOF</td>
+      <td>The Most Kind</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>مَالِكُ ٱلْمُلْكُ</td>
+      <td>MAALIK-UL-MULK</td>
+      <td>Master of the Kingdom, Owner of the Dominion</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>ذُو ٱلْجَلَالِ وَٱلْإِكْرَامُ</td>
+      <td>DHUL-JALAALI WAL-IKRAAM</td>
+      <td>Possessor of Glory and Honour, Lord of Majesty and Generosity</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>ٱلْمُقْسِطُ</td>
+      <td>AL-MUQSIT</td>
+      <td>The Equitable, the Requiter</td>
+    </tr>
+
+    <tr>
+      <td>87</td>
+      <td>ٱلْجَامِعُ</td>
+      <td>AL-JAAMI’</td>
+      <td>The Gatherer, the Uniter</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>ٱلْغَنيُّ</td>
+      <td>AL-GHANIYY</td>
+      <td>The Self-Sufficient, The Wealthy</td>
+    </tr>
+
+    <tr>
+      <td>89</td>
+      <td>ٱلْمُغْنِيُّ</td>
+      <td>AL-MUGHNI</td>
+      <td>The Enricher</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>ٱلْمَانِعُ</td>
+      <td>AL-MANI’</td>
+      <td>The Withholder</td>
+    </tr>
+
+    <tr>
+      <td>91</td>
+      <td>ٱلْضَّارُ</td>
+      <td>AD-DHARR</td>
+      <td>The Distresser</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>ٱلْنَّافِعُ</td>
+      <td>AN-NAFI’</td>
+      <td>The Propitious, the Benefactor</td>
+    </tr>
+
+    <tr>
+      <td>93</td>
+      <td>ٱلْنُّورُ</td>
+      <td>AN-NUR</td>
+      <td>The Light, The Illuminator</td>
+    </tr>
+
+    <tr>
+      <td>94</td>
+      <td>ٱلْهَادِي</td>
+      <td>AL-HAADI</td>
+      <td>The Guide</td>
+    </tr>
+
+    <tr>
+      <td>95</td>
+      <td>	ٱلْبَدِيعُ</td>
+      <td>AL-BADEE’</td>
+      <td>The Incomparable Originator</td>
+    </tr>
+
+    <tr>
+      <td>96</td>
+      <td>	ٱلْبَاقِي</td>
+      <td>AL-BAAQI</td>
+      <td>The Ever-Surviving, The Everlasting</td>
+    </tr>
+
+    <tr>
+      <td>97</td>
+      <td>ٱلْوَارِثُ</td>
+      <td>AL-WAARITH</td>
+      <td>The Inheritor, The Heir</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>ٱلْرَّشِيدُ</td>
+      <td>AR-RASHEED</td>
+      <td>The Guide, Infallible Teacher</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>ٱلْصَّبُورُ</td>
+      <td>AS-SABOOR</td>
+      <td>The Forbearing, The Patient</td>
+    </tr>
+
+      </table>
+      
+<p>Click on the image  to download the 99names and their meanings:<p>
+
+  <a href="/Busia-islamic-media/images/99 Names of Allah (Al Asma Ul Husna) - Meaning & Explanation.pdf" download>
+    <img src="/Busia-islamic-media/images/99 Names of Allah - POSTER HD.jpg" alt="99 Names of Allah - POSTER HD" width="104" height="142">
+  </a>
+  <h2>The Power of the 99 Names of Allah</h2>
+    <p>Do you feel blessed and inspired when you hear the recitation of Allah’s 99 Names? The power behind those names cannot be underestimated, as it is through them that we are reminded of His omnipotence, benevolence, and mercy. It reminds us why He deserves our worship and love above all else. For every time we say one of these divine titles aloud or keep them in our hearts, a connection to Allah strengthens within us. We know that He is always with us – watching over us to provide protection and guidance – no matter what hardships come our way. So dive into the magnificent depths of your faith by exploring these Names, for they can bring immense blessings into your life if approached with sincere humility and reverence.</p>
+
+  <hr>
+<h2>Benefits of the 99 Names of Allah:</h2>
+  <p>The 99 names of Allah are filled with immense potency, which is why Muslims from all over the world recite them often for both spiritual growth as well as worldly success. The recitation of these names helps to increase faith in Allah, enabling believers to become closer to Him, leading to tranquility and inner peace. They also provide guidance on how one should conduct their lives according to Islamic teachings and serve as a reminder that Allah is always near – providing comfort when it’s needed most.
+  
+  Additionally, meditating on these names can help to heal physical ailments, reduce stress and anxiety, and even bring about the desired outcome of a person’s prayers. The 99 Names of Allah have been praised throughout history for their incredible power – one that should never be underestimated. So make it your mission to recite them often and reap the rewards they offer! Insha’Allah (God willing). May this article inspire you to delve deeper into your relationship with Allah through His 99 beautiful names. </P>
+ <h3>FAQ</h3>
+<div class="slideshow-container">
+
+  <div class="mySlides">
+    <h3>Q: What are the 99 Names of Allah?</h3>
+
+      <p>A: The 99 Names of Allah (Asma al-Husna) are a collection of divine names that refer to the attributes and qualities associated with Allah.<br>
+         These names originate from the Islamic tradition, which dates back to the time of Prophet Muhammad in the seventh century CE.</p>
+         <hr>
+       <h3>Q: How can I learn more about these names?</h3>
+
+<p>A: You can explore various sources online or in print that provide interpretations and meanings for each name. Additionally, you can consider taking one of our online courses at Resala Academy to get a deeper understanding on this important topic.
+    </p>
+  </div>
+  
+  <div class="mySlides">
+    <h3>Q: What is the importance of knowing these names?</h3>
+
+   <p> A: Knowing the 99 Names of Allah is important because it helps us gain a better understanding of Allah’s divine qualities and His role in our lives. By reflecting on these names and their meanings, we can come closer to Allah and live with greater peace and clarity.
+  </p>
+  </div>
+  <div class="mySlides">
+    <h3>Q: Does Resala Academy offer any courses related to this topic?</h3>
+
+    <p>A: Yes! We offer a variety of interactive Islamic Studies classes at Resala Academy that cover the importance of the 99 Names of Allah and how to incorporate them into your daily life. Please visit resalaacademy.com for more information.
+  </p>
+    </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+  
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+  <br>
+
+  <br>
+  
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Al-Sunnah<a href="index.html" data-toggle="tooltip" title="Visit Busia-islamic-media">99Names</a></p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
